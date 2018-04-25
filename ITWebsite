@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class= "header">
+ <h1> IT Network Website</h1>
+</div>
+
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* header */
+.header {
+  background-image: url("hackintosh.jpg");
+  text-align: center;
+  padding: 14px;
+  color: white;
+  height: 200px;
+  font-family: MyOwnFont;
+  font-size: 35;
+  text-align: center;
+
+/* Min egen font länkning.   */
+}
+@font-face {
+    font-family: MyOwnFont;
+    src: url(Futuremoon.ttf);
+    font-weight: bold;
+}
+
+
+
+/*  Textboxar på sidorna  */
+.TextBox {
+    background-color: white;
+    width: 7s00px;
+    border: 5px solid blue;
+    padding: 25px;
+    margin: 25px;
+    color: blue;
+    font-style: Arial;
+
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+
+
+}
+
+
+#Home {background-image: url("circuit.jpg"); background-repeat: no-repeat; background-size: cover;}
+#News {background-image: url("circuit.jpg"); background-repeat: no-repeat; background-size: cover;}
+#Contact {background-image: url("circuit.jpg"); background-repeat: no-repeat; background-size: cover;}
+#About {background-image: url("circuit.jpg"); background-repeat: no-repeat; background-size: cover;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'blue')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'blue')" >News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'blue')">About</button>
+
+<div id="Home" class="tabcontent">
+  <div class="TextBox" >
+  <h3>Home</h3>
+  <p> Hello people!</p>
+</div>
+</div>
+
+<div id="News" class="tabcontent">
+  <div class="TextBox" >
+  <h3 style="font-size: 26;">News</h3>
+  <body>
+<p style="color:grey;">Computer networking news, reviews, solutions, and analysis for IT professionals. </p>
+<img border="2"src="html5.png" height="200" width="200"> <p style="color: black;">  This site is created in HTML and CSS </p>
+</body>
+
+</div>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <div class="TextBox" >
+  <h3>Contact</h3>
+  <body>
+  <p> Rise and shine, Mister Freeman. Rise and... shine. Not that I... wish to imply you have been sleeping on the job. </p>
+</body>
+
+</div>
+</div>
+
+<div id="About" class="tabcontent">
+  <div class="TextBox" >
+  <h3>About</h3>
+  <p> Rise and shine, Mister Freeman. Rise and... shine. Not that I... wish to imply you have been sleeping on the job.
+<p>No one is more deserving of a rest... and all the effort in the world would have gone to waste until... well, let's just say your hour has... come again.</p>
+
+<p> The right man in the wrong place can make all the difference in the world. So, wake up, Mister Freeman. Wake up and... smell the asses... </p>
+</div>
+</div>
+<!-- JAVASCRIPT-->
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
